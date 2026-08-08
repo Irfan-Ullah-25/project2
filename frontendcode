@@ -1,0 +1,38 @@
+You can follow any of the following 3 methods:
+
+Remove the old origin and readd the correct one:
+
+git remote remove origin
+git remote add origin <correct address>
+Update the existing remote links:
+
+git remote set-url origin <correct url>
+you can optionally provide --push to the above command.
+
+Update the remote section of your .git/config file:
+
+[remote "origin"]
+    url = <correct url>
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
+You can follow any of the following 3 methods:
+
+Remove the old origin and readd the correct one:
+
+git remote remove origin
+git remote add origin <correct address>
+Update the existing remote links:
+
+git remote set-url origin <correct url>
+you can optionally provide --push to the above command.
+
+Update the remote section of your .git/config file:
+
+[remote "origin"]
+    url = <correct url>
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
